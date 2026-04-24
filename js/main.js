@@ -217,3 +217,91 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= MOBILE PRODUCT DROPDOWN FIX ================= */
+/* Add this at bottom of main.js */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dropdownToggles = document.querySelectorAll('.navbar .dropdown-toggle');
+
+    dropdownToggles.forEach(toggle => {
+
+        toggle.addEventListener('click', function (e) {
+
+            if (window.innerWidth < 992) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const parent = this.closest('.dropdown');
+                const menu = parent.querySelector('.dropdown-menu');
+
+                /* close other open dropdowns */
+                document.querySelectorAll('.navbar .dropdown-menu.show').forEach(item => {
+                    if (item !== menu) item.classList.remove('show');
+                });
+
+                document.querySelectorAll('.navbar .dropdown-toggle.show').forEach(item => {
+                    if (item !== this) item.classList.remove('show');
+                });
+
+                menu.classList.toggle('show');
+                this.classList.toggle('show');
+            }
+        });
+
+    });
+
+    /* close when clicking outside */
+    document.addEventListener('click', function (e) {
+        if (window.innerWidth < 992 && !e.target.closest('.dropdown')) {
+            document.querySelectorAll('.navbar .dropdown-menu.show').forEach(menu => {
+                menu.classList.remove('show');
+            });
+
+            document.querySelectorAll('.navbar .dropdown-toggle.show').forEach(btn => {
+                btn.classList.remove('show');
+            });
+        }
+    });
+
+});
