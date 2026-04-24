@@ -254,3 +254,109 @@
         justify-content: center;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= MOBILE PRODUCT DROPDOWN FIX ================= */
+/* Add this at bottom of your CSS */
+
+@media (max-width: 991.98px) {
+
+    /* keep dropdown inside navbar */
+    .navbar .dropdown-menu,
+    .mega-menu {
+        position: static !important;
+        transform: none !important;
+        float: none !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        margin-top: 10px !important;
+        border-radius: 12px !important;
+        max-height: 420px;
+        overflow-y: auto;
+        display: none;
+        padding: 15px !important;
+    }
+
+    /* show when clicked */
+    .navbar .dropdown-menu.show,
+    .mega-menu.show {
+        display: block !important;
+    }
+
+    /* make product columns one by one */
+    .mega-menu .row > div {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .mega-title {
+        color: #ffd700;
+        margin-bottom: 8px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .mega-menu .dropdown-item {
+        white-space: normal;
+        padding: 8px 10px;
+        border-radius: 8px;
+    }
+
+    /* rotate arrow */
+    .dropdown-toggle.show::after {
+        transform: rotate(180deg);
+        transition: 0.3s;
+    }
+}
