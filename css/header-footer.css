@@ -1,8 +1,8 @@
-/* ==================== HEADER & FOOTER STYLES - TAITON HARDWARE ==================== */
+/* ==================== HEADER & FOOTER STYLES - TAITON/ENGIS HARDWARE ==================== */
 
 /* ==================== NAVBAR STYLES ==================== */
 #mainNavbar {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: linear-gradient(135deg, #1a3a5c 0%, #2c5f8a 100%);
     padding: 1rem 0;
     transition: all 0.3s ease;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -10,28 +10,44 @@
 
 #mainNavbar .navbar-brand {
     display: flex;
-    align-items: baseline;
-    gap: 5px;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
 }
 
 .brand-icon {
     font-size: 1.8rem;
-    color: #ffd700;
+    color: #d4a835;
 }
 
 .brand-text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: 2px;
     color: white;
 }
 
 .brand-sub {
-    font-size: 0.8rem;
-    font-weight: 300;
-    color: #ffd700;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #d4a835;
+    background: rgba(212, 168, 53, 0.15);
+    padding: 2px 8px;
+    border-radius: 20px;
     margin-left: 5px;
+}
+
+/* Logo image style */
+.navbar-brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.navbar-brand-logo img {
+    height: 45px;
+    width: auto;
 }
 
 .navbar-nav {
@@ -39,70 +55,359 @@
 }
 
 .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
     margin: 0 0.25rem;
     transition: all 0.3s;
-    padding: 8px 16px;
-    border-radius: 8px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.95rem;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #ffd700;
-    background: rgba(255, 215, 0, 0.1);
+    color: #d4a835;
+    background: rgba(212, 168, 53, 0.12);
 }
 
 .btn-quote {
-    background: #ffd700;
+    background: #d4a835;
     border: none;
-    color: #1a1a2e;
+    color: #fff;
     font-weight: 600;
-    padding: 8px 25px;
-    border-radius: 50px;
+    padding: 8px 28px;
+    border-radius: 40px;
     transition: all 0.3s;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-}
-
-.btn-quote:hover {
-    background: #ffed4a;
-    transform: translateY(-2px);
-    color: #1a1a2e;
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    background: #16213e;
-    border: none;
-    border-radius: 15px;
-    padding: 0.75rem 0;
-    margin-top: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.dropdown-item {
-    color: white;
-    padding: 0.6rem 1.5rem;
-    transition: all 0.2s;
     font-size: 0.9rem;
 }
 
-.dropdown-item:hover {
-    background: #ffd700;
-    color: #1a1a2e;
+.btn-quote:hover {
+    background: #c49b2e;
+    transform: translateY(-2px);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Large Dropdown for Products */
-.large-dropdown {
-    min-width: 280px;
+/* ==================== DROPDOWN MENU STYLES (DESKTOP) ==================== */
+.dropdown-menu {
+    background: #ffffff;
+    border: none;
+    border-radius: 16px;
+    padding: 0.75rem 0;
+    margin-top: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-item {
+    color: #1a2a3a;
+    padding: 0.6rem 1.8rem;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background: rgba(44, 95, 138, 0.08);
+    color: #2c5f8a;
+    padding-left: 2rem;
+}
+
+/* ==================== MEGA MENU STYLES (DESKTOP) ==================== */
+.mega-menu {
+    width: 780px;
+    padding: 20px 25px;
+    left: auto;
+    right: auto;
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+.mega-title {
+    color: #2c5f8a;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #d4a835;
+    display: inline-block;
+}
+
+.mega-menu .dropdown-item {
+    padding: 6px 0;
+    font-size: 0.85rem;
+    color: #4a5568;
+    background: transparent;
+}
+
+.mega-menu .dropdown-item:hover {
+    background: transparent;
+    color: #2c5f8a;
+    padding-left: 8px;
+}
+
+/* ==================== MOBILE STYLES (PERFECT DROPDOWN) ==================== */
+@media (max-width: 991.98px) {
+
+    /* Navbar container */
+    #mainNavbar {
+        padding: 0.8rem 0;
+    }
+
+    .navbar-brand {
+        z-index: 1001;
+    }
+
+    .brand-text {
+        font-size: 1.3rem;
+    }
+
+    .brand-icon {
+        font-size: 1.5rem;
+    }
+
+    .brand-sub {
+        font-size: 0.6rem;
+    }
+
+    /* Toggle button */
+    .navbar-toggler {
+        border: none;
+        padding: 8px 12px;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* Collapsible menu */
+    .navbar-collapse {
+        background: linear-gradient(135deg, #1a3a5c 0%, #2c5f8a 100%);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    /* Nav items */
+    .navbar-nav {
+        margin: 0;
+        gap: 8px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 12px 16px;
+        border-radius: 12px;
+        font-size: 1rem;
+    }
+
+    /* Dropdown toggle styling */
+    .dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dropdown-toggle::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        border: none;
+        margin-left: auto;
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown-toggle.show::after {
+        transform: rotate(180deg);
+    }
+
+    /* Dropdown menu container */
+    .dropdown-menu {
+        position: static !important;
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 14px !important;
+        margin-top: 8px !important;
+        margin-bottom: 8px !important;
+        padding: 10px !important;
+        box-shadow: none !important;
+        display: none !important;
+        animation: none !important;
+    }
+
+    .dropdown-menu.show {
+        display: block !important;
+    }
+
+    /* Dropdown items */
+    .dropdown-item {
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding: 10px 16px !important;
+        border-radius: 10px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .dropdown-item:hover {
+        background: rgba(212, 168, 53, 0.2) !important;
+        color: #d4a835 !important;
+    }
+
+    /* Mega menu mobile */
+    .mega-menu {
+        width: 100% !important;
+        padding: 15px !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 14px !important;
+        display: none !important;
+        box-shadow: none !important;
+    }
+
+    .mega-menu.show {
+        display: block !important;
+    }
+
+    .mega-menu .row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        margin: 0 !important;
+    }
+
+    .mega-menu .col-md-3 {
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 5px !important;
+    }
+
+    .mega-title {
+        color: #d4a835 !important;
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 10px !important;
+        padding-bottom: 6px !important;
+        border-bottom: 1px solid rgba(212, 168, 53, 0.5) !important;
+        display: inline-block !important;
+        background: transparent !important;
+    }
+
+    .mega-menu .dropdown-item {
+        padding: 8px 12px !important;
+        font-size: 0.85rem !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        border-radius: 8px !important;
+    }
+
+    .mega-menu .dropdown-item:hover {
+        background: rgba(212, 168, 53, 0.15) !important;
+        color: #d4a835 !important;
+        padding-left: 18px !important;
+    }
+
+    /* Quote button on mobile */
+    .btn-quote {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: center;
+        background: #d4a835;
+        color: #fff;
+    }
+
+    .btn-quote:hover {
+        background: #c49b2e;
+        transform: none;
+    }
+}
+
+/* ==================== TABLET STYLES (2 columns for mega menu) ==================== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .mega-menu .row {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    .mega-menu .col-md-3 {
+        width: 100% !important;
+    }
+}
+
+/* ==================== SMALL MOBILE STYLES ==================== */
+@media (max-width: 576px) {
+    .brand-text {
+        font-size: 1.1rem;
+    }
+
+    .brand-icon {
+        font-size: 1.3rem;
+    }
+
+    .brand-sub {
+        font-size: 0.55rem;
+        padding: 1px 6px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+
+    .mega-menu {
+        padding: 12px !important;
+    }
+
+    .mega-title {
+        font-size: 0.85rem !important;
+    }
+
+    .mega-menu .dropdown-item {
+        padding: 6px 10px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .btn-quote {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
 }
 
 /* ==================== FOOTER STYLES ==================== */
 .footer {
-    background: #0f0f1a;
+    background: #0f1a24;
     color: #aaa;
     padding: 60px 0 20px;
     margin-top: 0;
@@ -117,13 +422,23 @@
 
 .footer-logo i {
     font-size: 2rem;
-    color: #ffd700;
+    color: #d4a835;
+}
+
+.footer-logo img {
+    height: 45px;
+    width: auto;
 }
 
 .footer-logo h3 {
     margin-bottom: 0;
     font-size: 1.5rem;
     color: white;
+}
+
+.footer p {
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .footer h4 {
@@ -141,13 +456,14 @@
     left: 0;
     width: 40px;
     height: 3px;
-    background: #ffd700;
+    background: #d4a835;
     border-radius: 3px;
 }
 
 .footer ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer ul li {
@@ -157,30 +473,34 @@
 .footer ul li a {
     color: #aaa;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s;
     font-size: 0.9rem;
+    display: inline-block;
 }
 
 .footer ul li a:hover {
-    color: #ffd700;
-    padding-left: 5px;
+    color: #d4a835;
+    transform: translateX(5px);
 }
 
 .contact-list li {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .contact-list li i {
-    width: 25px;
-    color: #ffd700;
+    width: 28px;
+    color: #d4a835;
+    font-size: 1rem;
 }
 
 .footer-social {
     display: flex;
     gap: 12px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .footer-social a {
@@ -189,16 +509,17 @@
     justify-content: center;
     width: 38px;
     height: 38px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 50%;
     color: white;
     transition: all 0.3s;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .footer-social a:hover {
-    background: #ffd700;
-    color: #1a1a2e;
+    background: #d4a835;
+    color: #fff;
     transform: translateY(-3px);
 }
 
@@ -206,37 +527,11 @@
     text-align: center;
     padding-top: 30px;
     margin-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.8rem;
 }
 
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 992px) {
-    .navbar-nav {
-        margin: 1rem 0;
-    }
-
-    .btn-quote {
-        display: inline-flex;
-        width: fit-content;
-        margin-top: 10px;
-    }
-
-    .dropdown-menu {
-        background: #1a1a3e;
-        border: none;
-    }
-
-    .footer h4:after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .footer .text-center-mobile {
-        text-align: center;
-    }
-}
-
+/* ==================== FOOTER RESPONSIVE ==================== */
 @media (max-width: 768px) {
     .footer {
         text-align: center;
@@ -244,6 +539,11 @@
 
     .footer-logo {
         justify-content: center;
+    }
+
+    .footer h4:after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .contact-list li {
@@ -255,6 +555,23 @@
     }
 }
 
+/* ==================== ANIMATIONS ==================== */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu.show,
+.mega-menu.show {
+    animation: slideDown 0.25s ease forwards;
+}
 
 
 
@@ -308,55 +625,122 @@
 
 
 
-/* ================= MOBILE PRODUCT DROPDOWN FIX ================= */
-/* Add this at bottom of your CSS */
 
-@media (max-width: 991.98px) {
 
-    /* keep dropdown inside navbar */
-    .navbar .dropdown-menu,
+/* ==================== FIX FOR DROPDOWN POSITIONING ==================== */
+@media (min-width: 992px) {
+    .dropdown {
+        position: relative;
+    }
+    
+    .mega-menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 12px;
+    }
+    
+    /* Align mega menu to left for first dropdown items */
+    .navbar-nav > .dropdown:first-child .mega-menu {
+        left: 0;
+        transform: none;
+    }
+    
+    /* Align mega menu to right for last dropdown items */
+    .navbar-nav > .dropdown:last-child .mega-menu {
+        left: auto;
+        right: 0;
+        transform: none;
+    }
+    
+    /* Prevent mega menu from going off screen */
+    .mega-menu {
+        max-width: 90vw;
+        width: auto;
+        min-width: 600px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mega-menu {
+        width: 780px;
+        min-width: 780px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .mega-menu {
+        width: 700px;
+        min-width: 700px;
+    }
+}
+
+@media (max-width: 991px) {
     .mega-menu {
         position: static !important;
         transform: none !important;
-        float: none !important;
+        left: auto !important;
+        right: auto !important;
         width: 100% !important;
         min-width: 100% !important;
-        margin-top: 10px !important;
-        border-radius: 12px !important;
-        max-height: 420px;
-        overflow-y: auto;
-        display: none;
-        padding: 15px !important;
     }
+}
 
-    /* show when clicked */
-    .navbar .dropdown-menu.show,
-    .mega-menu.show {
-        display: block !important;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== FORCE DROPDOWN TO OPEN ON RIGHT SIDE ==================== */
+@media (min-width: 992px) {
+    /* Make all dropdowns open to the right */
+    .dropdown-menu {
+        left: auto !important;
+        right: 0 !important;
+        transform: translateX(0) !important;
     }
-
-    /* make product columns one by one */
-    .mega-menu .row > div {
-        width: 100%;
-        margin-bottom: 15px;
+    
+    /* Ensure mega menu also opens on right */
+    .mega-dropdown-menu {
+        left: auto !important;
+        right: 0 !important;
+        transform: translateX(0) !important;
     }
-
-    .mega-title {
-        color: #ffd700;
-        margin-bottom: 8px;
-        font-size: 15px;
-        font-weight: 700;
+    
+    /* First dropdown item - also on right */
+    .navbar-nav > .nav-item:first-child .dropdown-menu {
+        left: auto !important;
+        right: 0 !important;
     }
-
-    .mega-menu .dropdown-item {
-        white-space: normal;
-        padding: 8px 10px;
-        border-radius: 8px;
-    }
-
-    /* rotate arrow */
-    .dropdown-toggle.show::after {
-        transform: rotate(180deg);
-        transition: 0.3s;
+    
+    /* Last dropdown item - on right */
+    .navbar-nav > .nav-item:last-child .dropdown-menu {
+        left: auto !important;
+        right: 0 !important;
     }
 }
